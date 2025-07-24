@@ -1,14 +1,22 @@
-# 📊 Log Analyzer
+# 📊 Log Analyzer - Click Fraud Detection
 
-Strumento per l'analisi automatica di file di log web, con supporto per diverse strutture di archiviazione e generazione di statistiche dettagliate.
+Strumento specializzato per il rilevamento di **click fraud** nei log dei siti che utilizzano Google Ads. Analizza automaticamente i file di log web per identificare visite sospette provenienti dal network di Google Ads ma originarie da paesi diversi dall'Italia.
+
+## 🎯 Scopo
+
+Questo analizzatore è progettato per individuare attività di **click fraud** specificamente da:
+- ✅ Visite con parametro `gclid` (Google Click ID)
+- ✅ Provenienti da IP non italiani
+- ✅ Con referrer esterno al dominio analizzato
 
 ## ✨ Caratteristiche
 
 - 🔍 Analisi automatica di file di log compressi (GZ, BZ2, ZIP)
 - 📦 Supporto per diverse strutture di archiviazione
-- 📈 Generazione di statistiche dettagliate
+- 📈 Generazione di statistiche dettagliate per click fraud
 - 🗂️ Struttura organizzata per cliente/dominio
-- 🌍 Geocoding degli IP (richiede database GeoIP)
+- 🌍 Geocoding degli IP per identificazione geografica
+- 🚨 Rilevamento automatico di pattern sospetti
 
 ## 🚀 Utilizzo
 
@@ -39,6 +47,18 @@ python run_analysis.py example.com
 ```
 
 Questo comando esegue l'analisi dei log e genera le statistiche.
+
+#### 🔍 Cosa analizza lo script:
+
+- **Pattern di ricerca**: Cerca righe contenenti `gclid=` (Google Click ID)
+- **Filtro geografico**: Filtra solo IP non italiani
+- **Filtro referrer**: Considera solo visite con referrer esterno
+- **Output**: Genera file con le righe sospette e statistiche CSV
+
+#### 📈 Risultati generati:
+
+- `risultati.txt`: Log delle visite sospette (non italiane con gclid)
+- `stats.csv`: Statistiche dettagliate per paese, referrer, data, ecc.
 
 ### ⚙️ Opzioni avanzate
 
@@ -74,8 +94,9 @@ Questa struttura è molto semplice e intuitiva:
 - ⚙️ Non è necessario configurare manualmente il nome del dominio
 - 🔍 Il file ZIP viene trovato automaticamente
 - 💾 I risultati vengono salvati direttamente nella cartella del dominio
+- 🚨 Rilevamento automatico di click fraud sospetti
 
-Tutto ciò che devi fare è creare una cartella con il nome del dominio, mettere il file ZIP nella sottocartella logs, e lanciare lo script di analisi.
+Tutto ciò che devi fare è creare una cartella con il nome del dominio, mettere il file ZIP nella sottocartella logs, e lanciare lo script di analisi per identificare potenziali attività di click fraud.
 
 ## 📄 Licenza
 
