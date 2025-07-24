@@ -20,11 +20,20 @@ Questo analizzatore è progettato per individuare attività di **click fraud** s
 
 ## 🚀 Utilizzo
 
-### 1. ⚙️ Setup iniziale
+### 1. 📥 Download e Setup del progetto
 
-Prima di tutto, configura il database GeoIP e crea la struttura per un nuovo dominio:
-
+#### Clona il repository:
 ```bash
+git clone https://github.com/martinomh/analisi-log-click-fraud.git
+cd analisi-log-click-fraud
+```
+
+#### Configura l'ambiente:
+```bash
+# Installa le dipendenze Python
+pip install -r requirements.txt
+
+# Configura il database GeoIP e crea la struttura per un nuovo dominio
 python setup.py example.com
 ```
 
@@ -60,7 +69,7 @@ Questo comando esegue l'analisi dei log e genera le statistiche.
 - `risultati.txt`: Log delle visite sospette (non italiane con gclid)
 - `stats.csv`: Statistiche dettagliate per paese, referrer, data, ecc.
 
-### ⚙️ Opzioni avanzate
+### 3. ⚙️ Opzioni avanzate
 
 Per analizzare solo i log o solo le statistiche:
 

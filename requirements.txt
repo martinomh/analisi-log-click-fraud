@@ -1,0 +1,10 @@
+# Log Analyzer - Click Fraud Detection
+# Dipendenze Python necessarie per il progetto
+
+# Database GeoIP per il geocoding degli indirizzi IP
+geoip2>=4.0.0
+
+# Nota: Le seguenti librerie sono incluse nella standard library di Python 3:
+# - os, sys, argparse, datetime, re, csv, collections, urllib.parse
+# - zipfile, io, bz2, gzip, tarfile, glob
+# - Non è necessario installarle separatamente 
