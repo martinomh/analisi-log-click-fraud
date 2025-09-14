@@ -121,3 +121,24 @@ L'utente è responsabile di:
 - 🔧 Verificare la compatibilità con il proprio ambiente
 - 🧪 Testare il software prima dell'utilizzo in produzione
 - 💾 Eseguire backup dei dati prima dell'analisi
+
+
+## ✍️ Crediti
+
+![Search Foundry](https://github.com/Search-Foundry/seo-tool-skeleton/raw/master/screenshots/SearchFoundryLogo.svg)
+
+
+- A cura di [Martino Mosna](https://www.martinomosna.com), parte del collettivo [Search Foundry](https://www.searchfoundry.pro)
+
+## Licenza
+
+Questo progetto è distribuito con licenza [MIT](LICENSE).
+
+---
+© 2025 Martino Mosna - Founding member of Search Foundry
+
+Made with ❤️ and 🤖
+
+Questo progetto è rilasciato a scopo didattico e sperimentale.
+
+Se ti è stato utile, lascia una ⭐️ su GitHub!
